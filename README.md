@@ -13,6 +13,6 @@ make: *** [Makefile:166: test_long_word_input] Error 134
 
 I enlarge the allocated memory by 2 times larger than the previous capacity.
 
-When I set the original capacity to 60, it will cause error in large input. But when I change it to 64, the error magically disappear.
+When I set the original capacity to 60, it causes error in large input. But when I change it to 64, the error magically disappears.
 
 I still can't figure out why.
