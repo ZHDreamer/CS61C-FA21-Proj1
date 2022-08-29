@@ -188,6 +188,6 @@ test_long_word_dict: clean philphix
 testpassedall:
 	@echo "You have passed all of the tests!"
 
-unittest: 
+unittest:
 	$(CC) $(LDFLAGS) -D _PHILPHIX_UNITTEST ./tests/phil_test.c ./src/philphix.c ./src/hashtable.c -o unittest $(CUNIT)
 	./unittest

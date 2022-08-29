@@ -10,25 +10,29 @@
  * but C never defines it so you have to define it yourself.  :(
  */
 #ifndef NULL
-#define NULL ((void *)0)
+    #define NULL ((void *)0)
 #endif
 
 /*
- * This header file defines an interface to a generic chained hash table. 
+ * This header file defines an interface to a generic chained hash table.
  * It stores void * data and uses two functions, int (*) (void *)
  * and int (*) (void *, void *), to compute the hash and check
  * for equality.
  */
 typedef struct HashBucketEntry {
-  void *key;
-  void *data;
-  struct HashBucketEntry *next;
+    void                   *key;
+    void                   *data;
+    struct HashBucketEntry *next;
 } HashBucketEntry;
 
 /* Task 1.1 */
 typedef struct HashTable {
-  // -- TODO --
-  // HINT: Take a look at createHashTable.
+    // -- DONE --
+    // HINT: Take a look at createHashTable.
+    int               size;
+    HashBucketEntry **buckets;
+    unsigned int (*hashFunction)(void *);
+    int (*equalFunction)(void *, void *);
 } HashTable;
 
 /*
